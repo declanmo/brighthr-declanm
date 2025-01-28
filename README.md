@@ -11,6 +11,8 @@ This project is a file management application built as a coding assessment for B
 
 ## Getting Started
 
+As well as installing locally, this application has been deployed via Cloudflare Workers and the frontend can be accessed at the following URL https://brighthr-declanm.pages.dev/
+
 ### Prerequisites
 
 Make sure you have the following installed on your machine:
