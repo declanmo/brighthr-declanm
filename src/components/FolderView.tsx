@@ -48,8 +48,9 @@ const FolderView = () => {
       )}
       <div className="flex justify-end mb-4 gap-3 items-center">
         <div>
-          <label className="mr-2">Sort by:</label>
+          <label htmlFor="sortSelect" className="mr-2">Sort by:</label>
           <select
+            id="sortSelect"
             value={sortCriteria}
             onChange={(e) => handleSortChange(e.target.value as "name" | "date")}
             className="border px-2 py-1"
