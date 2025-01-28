@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# DeclanM - BrightHR Test
 
 This project is a file management application built as a coding assessment for BrightHR with React and TypeScript. It allows users to view, sort, and filter files and folders. The timeframe for this project was 2-3 hours.
 
@@ -27,14 +27,14 @@ Make sure you have the following installed on your machine:
 
 2. Install the dependencies:
 
-  npm install
+    npm install
 
 
 ## Running the Application
 
 To start the development server, run:
 
-  npm run dev
+    npm run dev
 
 This will start the Vite development server and you can view the application in your browser at http://localhost:5173/
 
@@ -42,7 +42,7 @@ This will start the Vite development server and you can view the application in 
 
 To run the tests, use the following command:
 
-  npm test
+    npm test
 
 This will run all the tests using Jest and display the results in the terminal.
 
@@ -70,7 +70,7 @@ There are many tweaks and adjustments that could be made to this application to 
 
 - Aria tags should be added to the application
 
-- Better semantic HTML should be used such as <header>, <main>, <section>, etc.
+- Better semantic HTML should be used such as header, main, section, etc.
 
 - All click events should be modified to ensure it also handles 'enter' keypresses for users controlling the site via keyboard.
 
@@ -78,8 +78,6 @@ There are many tweaks and adjustments that could be made to this application to 
 
 ### Additional Features
 
-File Upload: Implement a file upload feature that allows users to add new files to the application. This would involve creating a form with a file input and handling the file upload process on the client side.
+File Upload: Implement a file upload feature that allows users to add new files to the application. This would involve creating a form with a file input and handling the file upload process.
 
-Folder Navigation: Enhance the folder navigation to allow users to drill down into nested folders and navigate back to parent folders. This would involve updating the state to keep track of the current folder and rendering the appropriate files and folders.
-
-User Authentication: Add user authentication to secure the application and allow users to log in and manage their files. This would involve integrating with an authentication service and managing user sessions.
+Allow downloading: Allow viewing / downloading of the files
