@@ -1,50 +1,85 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a file management application built as a coding assessment for BrightHR with React and TypeScript. It allows users to view, sort, and filter files and folders. The timeframe for this project was 2-3 hours.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Getting Started](#getting-started)
+- [Running the Application](#running-the-application)
+- [Running Tests](#running-tests)
+- [Approach to Incomplete Functionality](#approach-to-incomplete-functionality)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+Make sure you have the following installed on your machine:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Node.js (v20.9.0 or higher)
+- npm (v10.1.0 or higher)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clone the repository:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   git clone https://github.com/declanmo/brighthr-declanm.git
+   cd brighthr-declanm
+
+2. Install the dependencies:
+
+  npm install
+
+
+## Running the Application
+
+To start the development server, run:
+
+  npm run dev
+
+This will start the Vite development server and you can view the application in your browser at http://localhost:5173/
+
+## Running Tests
+
+To run the tests, use the following command:
+
+  npm test
+
+This will run all the tests using Jest and display the results in the terminal.
+
+## Approach to Incomplete Functionality
+
+### Improvements to current application
+
+#### UI / UX
+
+There are many tweaks and adjustments that could be made to this application to improve the usability, some of them I would target:
+
+- Showing the current directory at the top of the view - this would make it easier for users to see which folder they are currently in, and where they can return back to.
+
+- Responsive Design - For speed of setup this application has been minimally optimised, it would be of utmost importance to improve the user experience when on mobile or tablet.
+
+- Hover effects should be added to improve clearness, especially to rows which are clickable.
+
+#### Sorting
+
+- Allow users to sort by name and date in reverse as well
+
+- Allow the clicking of table headers to apply sorts and then reflect with icons.
+
+#### Accessibility
+
+- Aria tags should be added to the application
+
+- Better semantic HTML should be used such as <header>, <main>, <section>, etc.
+
+- All click events should be modified to ensure it also handles 'enter' keypresses for users controlling the site via keyboard.
+
+- Alt text should be added for images and icons
+
+### Additional Features
+
+File Upload: Implement a file upload feature that allows users to add new files to the application. This would involve creating a form with a file input and handling the file upload process on the client side.
+
+Folder Navigation: Enhance the folder navigation to allow users to drill down into nested folders and navigate back to parent folders. This would involve updating the state to keep track of the current folder and rendering the appropriate files and folders.
+
+User Authentication: Add user authentication to secure the application and allow users to log in and manage their files. This would involve integrating with an authentication service and managing user sessions.
