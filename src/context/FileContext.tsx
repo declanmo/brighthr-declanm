@@ -1,22 +1,22 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import filesData from "../data/files.json";
 
-interface FileOrFolder {
+export interface FileItem {
     type: string;
     name: string;
     added?: string;
-    files?: FileOrFolder[];
+    files?: FileItem[];
 }
 
 interface FileContextType {
-    data: FileOrFolder[];
-    setData: React.Dispatch<React.SetStateAction<FileOrFolder[]>>;
+    data: FileItem[];
+    setData: React.Dispatch<React.SetStateAction<FileItem[]>>;
 }
 
 const FileContext = createContext<FileContextType | undefined>(undefined);
 
 export const FileProvider = ({ children }: { children: ReactNode }) => {
-    const [data, setData] = useState<FileOrFolder[]>(filesData);
+    const [data, setData] = useState<FileItem[]>(filesData);
 
     return (
         <FileContext.Provider value={{ data, setData }}>
